@@ -370,7 +370,14 @@ export default function ShipmentDetail() {
       alert("Failed to delete shipment.");
     }
   };
+  const apiUrl = (
+  import.meta.env.VITE_API_URL ||
+  `${window.location.protocol}//${window.location.hostname}:8000`
+  ).replace(/\/$/, "");
 
+  const wsUrl = apiUrl.replace(/^http/, "ws") + "/gps/ws";
+
+  const ws = new WebSocket(wsUrl);
   if (loading) {
     return (
       <AppLayout title="Shipment Telemetry" subtitle="Loading detailed tracking panel...">
