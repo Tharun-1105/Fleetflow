@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-
+CORS_ORIGINS: str = "http://localhost:5173"
 #from sqlalchemy import create_engine
 #from sqlalchemy.orm import sessionmaker, declarative_base
 #from dotenv import load_dotenv
