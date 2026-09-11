@@ -2,7 +2,7 @@ import uuid
 from sqlalchemy import Column, Float, DateTime, Date, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
-from database import Base
+from app.database import Base
 
 
 class FuelRecord(Base):

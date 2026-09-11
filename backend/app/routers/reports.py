@@ -3,7 +3,7 @@ import datetime
 import uuid
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from sqlalchemy.orm import Session
-from database import get_db
+from app.database import get_db
 
 from app.models.user import User, RoleEnum
 from app.models.vehicle import Vehicle

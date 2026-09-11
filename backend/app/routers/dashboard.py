@@ -2,7 +2,7 @@ import datetime
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from sqlalchemy import text, func
-from database import get_db
+from app.database import get_db
 from app.models.vehicle import Vehicle
 from app.models.driver import Driver
 from app.models.trip import Trip

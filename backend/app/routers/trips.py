@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Body
 from sqlalchemy.orm import Session
-from database import get_db
+from app.database import get_db
 
 from app.routers.fleet import schedule_trip, start_trip, end_trip, recalculate_trip_route, get_trips, delete_trip
 from app.models.user import User

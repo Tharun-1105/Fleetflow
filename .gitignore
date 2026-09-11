@@ -1,0 +1,30 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python Caches & Virtual Envs
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# Node & Build artifacts
+node_modules/
+dist/
+build/
+.cache/
+
+# Celery
+celerybeat-schedule*
+celerybeat-schedule.*
+
+# IDE / OS Files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+*.log

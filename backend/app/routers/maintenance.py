@@ -2,7 +2,7 @@ import uuid
 import datetime
 from fastapi import APIRouter, Depends, HTTPException, status, Body, Query
 from sqlalchemy.orm import Session
-from database import get_db
+from app.database import get_db
 
 from app.models.user import User
 from app.models.driver import Driver

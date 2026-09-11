@@ -3,7 +3,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import datetime, timezone, timedelta
 
-from database import get_db
+from app.database import get_db
 from app.models.user import User
 from app.schemas.user import (
     UserSignup, UserResponse, Token, TokenWithUser,
@@ -15,7 +15,7 @@ from app.core.security import (
     create_access_token,
     get_current_user,
 )
-from config import settings
+from app.config import settings
 from app.services.email_service import send_otp_email
 
 router = APIRouter(

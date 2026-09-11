@@ -4,7 +4,7 @@ import uuid
 import datetime
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect, Depends, HTTPException, status
 from sqlalchemy.orm import Session, sessionmaker
-from database import engine, get_db
+from app.database import engine, get_db
 from app.models.trip import Trip
 from app.models.vehicle import Vehicle
 from app.models.shipment import Shipment

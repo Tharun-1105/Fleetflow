@@ -14,7 +14,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 try:
     from app.config import settings
 except ImportError:
-    from config import settings
+    from app.config import settings
 
 # Create PostgreSQL engine
 engine = create_engine(

@@ -1,6 +1,6 @@
 import uuid
 import datetime
-from database import SessionLocal, engine
+from app.database import SessionLocal, engine
 from sqlalchemy import text
 from app.models.user import User
 from app.models.vehicle import Vehicle

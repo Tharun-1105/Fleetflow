@@ -3,7 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from fastapi import HTTPException, status
-from config import settings
+from app.config import settings
 
 logger = logging.getLogger(__name__)
 

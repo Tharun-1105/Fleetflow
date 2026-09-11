@@ -6,7 +6,7 @@ import urllib.request
 import urllib.parse
 from typing import Optional
 from datetime import datetime, timedelta
-from config import settings
+from app.config import settings
 from app.services.redis_service import redis_service
 
 logger = logging.getLogger(__name__)

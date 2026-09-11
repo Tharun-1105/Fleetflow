@@ -27,7 +27,7 @@ from app.routers.notifications import router as notifications_router
 from app.routers.reports import router as reports_router
 from app.routers.attendance import router as attendance_router
 from app.celery_worker import run_maintenance_alert_check
-from config import settings
+from app.config import settings
 
 app = FastAPI(
     title="FleetFlow API",
@@ -98,7 +98,7 @@ app.include_router(attendance_router)
 async def startup_event():
     # Database migration check for profile_picture column and leave_requests table
     try:
-        from database import SessionLocal
+        from app.database import SessionLocal
         from sqlalchemy import text
         db = SessionLocal()
         db.execute(text("ALTER TABLE users ADD COLUMN IF NOT EXISTS profile_picture TEXT;"))

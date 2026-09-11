@@ -278,7 +278,10 @@ export default function ShipmentDetail() {
   };
 
   const connectWebSocket = () => {
-    const wsUrl = `ws://${window.location.hostname}:8000/gps/ws`;
+    const apiUrl = (
+      import.meta.env.VITE_API_URL || `${window.location.protocol}//${window.location.hostname}:8000`
+    ).replace(/\/$/, "");
+    const wsUrl = apiUrl.replace(/^http/, "ws") + "/gps/ws";
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
