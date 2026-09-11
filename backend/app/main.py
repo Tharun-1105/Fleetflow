@@ -94,7 +94,6 @@ app.include_router(notifications_router)
 app.include_router(reports_router)
 app.include_router(attendance_router)
 
-asyncio.create_task(gps_simulation_loop())
 @app.on_event("startup")
 async def startup_event():
     # Database migration check for profile_picture column and leave_requests table
